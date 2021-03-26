@@ -1,9 +1,9 @@
-import './App.css';
+import RootReducer from 'route';
 
 function App() {
   return (
     <div className="App">
-      <p>test</p>
+      <RootReducer />
     </div>
   );
 }
