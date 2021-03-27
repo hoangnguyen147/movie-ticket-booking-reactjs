@@ -1,0 +1,21 @@
+.footer {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    &__content {
+        text-align: center;
+        color: #f4f4f4;
+        line-height: 30px;
+        h4 {
+          font-style: italic;
+          cursor: pointer;
+          font-size: 1.3rem;
+        }
+        h4:hover {
+           color: red;
+        }
+    }
+}
