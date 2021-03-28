@@ -1,9 +1,10 @@
-import RootReducer from 'route';
+import AppRouter from 'route';
+require('dotenv').config()
 
 function App() {
   return (
     <div className="App">
-      <RootReducer />
+      <AppRouter />
     </div>
   );
 }

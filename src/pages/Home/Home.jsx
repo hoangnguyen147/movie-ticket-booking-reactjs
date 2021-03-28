@@ -10,6 +10,7 @@ Home.propTypes = {
 };
 
 function Home(props) {
+    console.log(process.env.REACT_APP_API_KEY);
     return (
         <div>
             <Header />

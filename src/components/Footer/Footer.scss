@@ -9,10 +9,12 @@
         text-align: center;
         color: #f4f4f4;
         line-height: 30px;
+        p {
+            font-style: italic;
+        }
         h4 {
-          font-style: italic;
-          cursor: pointer;
-          font-size: 1.3rem;
+            font-size: 1.3rem;
+            cursor: pointer;
         }
         h4:hover {
            color: red;

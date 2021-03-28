@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import logo from 'images/home-banner.gif'
 import './Header.scss';
+import logo from 'images/netflix-logo.png';
+import bg from 'images/bg-header.jpg';
 
 Header.propTypes = {
 
@@ -9,10 +10,10 @@ Header.propTypes = {
 
 function Header(props) {
     return (
-        <header>
-            <div className="header">
-                <a className="header__logo">
-                    <img src="https://www.heyuguys.com/images/2020/03/netflix-logo.png" alt="logo" width="100px" />
+        <header className="header" style={ { backgroundImage: `url(${bg})` }} >
+            <div className="header__container">
+                <a className="header__container-logo">
+                    <img src={logo} alt="logo" width="100px" />
                 </a>
             </div>
         </header>
