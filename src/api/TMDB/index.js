@@ -8,9 +8,9 @@ export default async function callApi({ url, method, data, option }) {
   return new Promise((resolve, reject) => {
     axios({
       method,
-      url: `${BASE_API}${url}&languege=vi-VN&api_key=${API_KEY}`,
+      url: `${BASE_API}${url}&languege=vi-VN`,
       data,
-      headers: { ...option?.headers },
+      headers: { ...option?.headers, Authorization: `Bearer ${token}` },
     })
       .then((res) => resolve(res.data))
       .catch((err) => reject(err));

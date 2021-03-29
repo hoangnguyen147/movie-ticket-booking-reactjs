@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as movie from 'api/TMDB/movie';
-import PlayingMovies from 'components/PlayingMovies/PlayingMovies';
+import PlayingMovies from 'components/NowPlayingMovies/PlayingMovies';
 
 MainHome.propTypes = {
     
