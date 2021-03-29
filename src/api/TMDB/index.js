@@ -1,13 +1,14 @@
 import axios from "axios";
 
-const BASE_API = process.env.TDMB_BASE_API;
-const API_KEY = process.env.API_KEY;
+const BASE_API = process.env.REACT_APP_TDMB_BASE_API;
+const API_KEY = process.env.REACT_APP_API_KEY;
+const token = process.env.REACT_APP_TDMB_API_TOKEN;
 
 export default async function callApi({ url, method, data, option }) {
   return new Promise((resolve, reject) => {
     axios({
       method,
-      url: `${BASE_API}${url}&${API_KEY}`,
+      url: `${BASE_API}${url}&languege=vi-VN&api_key=${API_KEY}`,
       data,
       headers: { ...option?.headers },
     })
