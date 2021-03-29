@@ -1,8 +1,8 @@
 import callAPi from './index';
 
-export function getPopularMovie(page) {
+export function getPlayingMovies(page) {
     return callAPi({
-        url: `/movie/popular?$page=${page}`,
+        url: `/movie/now_playing?$page=${page}`,
         method: "get",
     })
 }
