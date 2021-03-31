@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import store from 'redux/store';
 import 'styles/_reset.scss';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 ReactDOM.render(

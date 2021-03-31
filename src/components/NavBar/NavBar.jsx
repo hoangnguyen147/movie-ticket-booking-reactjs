@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-NarBar.propTypes = {
+NavBar.propTypes = {
     
 };
 
-function NarBar(props) {
+function NavBar(props) {
     return (
-        <div>
+        <div className="navbar">
             
         </div>
     );
 }
 
-export default NarBar;
+export default NavBar;

@@ -1,8 +1,9 @@
 import axios from "axios";
 
-const BASE_API = process.env.REACT_APP_TDMB_BASE_API;
+const BASE_API = process.env.REACT_APP_TMDB_BASE_API;
 const API_KEY = process.env.REACT_APP_API_KEY;
-const token = process.env.REACT_APP_TDMB_API_TOKEN;
+const token = process.env.REACT_APP_TMDB_API_TOKEN;
+
 
 export default async function callApi({ url, method, data, option }) {
   return new Promise((resolve, reject) => {

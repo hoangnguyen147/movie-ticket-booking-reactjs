@@ -11,7 +11,6 @@ function MainHome(props) {
     
     return (
         <div className="main">
-            <p>content</p>
             <NowPlayingMovies />
         </div>
     );

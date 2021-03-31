@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './MovieCard.scss'
 
 MovieCard.propTypes = {
     id: PropTypes.number,
@@ -30,14 +31,14 @@ MovieCard.defaultProps = {
     voteCount: 0,
 }
 
-const baseImageUrl = process.env.REACT_APP_IMAGE_TMDB_URL;
+const baseImageUrl = process.env.REACT_APP_TMDB_IMAGE_URL;
 
 function MovieCard(props) {
     const posterUrl = baseImageUrl + props.posterPath;
     console.log(posterUrl);
     return (
-        <div className="card" style={{ backgroundImage: `url(${posterUrl})`}}>
-            
+        <div className="movies-card" style={{ backgroundImage: ``}}>
+            <p>{props.title}</p>
         </div>
     );
 }
