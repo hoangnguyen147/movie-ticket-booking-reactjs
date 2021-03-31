@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './NowPlayingMovies.scss'
 import MovieCard from 'components/MovieCard/MovieCard';
+import { connect } from 'react-redux';
+import { getNowPlaying } from 'redux/actions/movie/nowPlaying';
 
 
 NowPlayingMovies.propTypes = {
@@ -9,19 +11,16 @@ NowPlayingMovies.propTypes = {
 };
 
 
-function NowPlayingMovies(props) {
-    const [data, setData] = useState([]);
+function NowPlayingMovies({movies, ...props}) {
     useEffect(() => {
         async function getNowPlayingMovies() {
-            const res = await movie.getNowPlayingMovies(1);
-            console.log(res);
-            setData(res);
+            await props.getNowPlaying(1);
+            console.log(props.movies);
         }
         getNowPlayingMovies();
     }, [])
-    if (data) {
-        console.log(data);
-        const movies = data.results || [];
+    if (movies) {
+        console.log(movies);
         return (
             <div className="list">
                 <ul>
@@ -58,10 +57,11 @@ function NowPlayingMovies(props) {
 }
 
 const mapStateToProps = (state) => ({
-
+    movies: state.nowPlaying.movies
 });
 
 const mapDispatchToProps = (dispatch) => ({
+    getNowPlaying: (page) => dispatch(getNowPlaying(page))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NowPlayingMovies);

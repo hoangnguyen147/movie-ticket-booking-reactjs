@@ -1,13 +1,10 @@
 import thunk from "redux-thunk";
-import reducer from "./reducers";
+import rootReducer from "./reducers/rootReducer";
 const { configureStore } = require("@reduxjs/toolkit");
 
 
-const rootReducer = {
-  ...reducer,
-}
 const store = configureStore({
-  reducer: reducer,
+  reducer: rootReducer,
   middleware: [thunk]
 });
 

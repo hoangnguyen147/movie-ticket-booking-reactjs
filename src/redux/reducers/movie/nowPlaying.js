@@ -5,16 +5,17 @@ const initialState = {
     movies: [],
 };
 
-const getNowPlayingReducer = handleActions(
+const nowPlaying = handleActions(
     {
         [actions.GET_NOW_PLAYING_SUCCESS]: (state, action) => {
             return {
                 ...state,
-                movies: action.payload.results,
+                movies: action.payload,
             }
         }
-    }
+    },
+    initialState
 )
 
-export default getNowPlayingReducer;
+export default nowPlaying;
 

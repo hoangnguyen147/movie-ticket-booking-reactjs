@@ -4,16 +4,16 @@ import * as constants from 'redux/constants';
 
 const getNowPlayingSuccess = createAction(constants.GET_NOW_PLAYING_SUCCESS);
 
-export default getNowPlaying = (page) => {
+export const getNowPlaying = (page) => {
     return async (dispatch) => {
         try {
             const res = await getNowPlayingMovies(page);
-            dispatch(getNowPlayingSuccess(res));
+            console.log(res.results);
+            dispatch(getNowPlayingSuccess(res.results));
 
         } catch (err) {
             console.log(err);
         }
     }
 }
-
 
