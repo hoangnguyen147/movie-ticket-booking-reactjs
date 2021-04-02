@@ -37,8 +37,12 @@ function MovieCard(props) {
     const posterUrl = baseImageUrl + props.posterPath;
     console.log(posterUrl);
     return (
-        <div className="movies-card" style={{ backgroundImage: ``}}>
-            <p>{props.title}</p>
+        <div className="movie" >
+            <div className="movie__card">
+                <div className="movie__thumbnail" style={{ backgroundImage: `url(${posterUrl})`}}>
+                    <p>{props.title}</p>
+                </div>
+            </div>
         </div>
     );
 }
